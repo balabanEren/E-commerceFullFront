@@ -2,7 +2,19 @@ let allSlides=document.querySelectorAll(".slides .slide")
 let currentSlideİndex=0
 let forwardSlide=document.querySelector(".forwardSlide")
 let backSlide=document.querySelector(".backSlide")
+///
+let pageElavator=document.getElementById("pageElavator")
 
+
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    })
+}
+
+pageElavator.addEventListener("click",scrollToTop)
 
 
 function SlideTrigger(){
@@ -45,3 +57,5 @@ backSlide.addEventListener("click",()=>{
 
 SlideTrigger()
 setInterval(slideAuto,4000)
+
+
