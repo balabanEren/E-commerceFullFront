@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flexFooter{
+    display: flex;
+   font-family: sans-serif;
+    justify-content: space-around;
+    background-color: rgb(231, 231, 231);
+    padding: 3%;
+  
+}
+
+@media (max-width:600px) {
+    .flexFooter{
+
+        flex-direction: column;
+        padding: 6%;
+    }
+}
+
+.contact{
+    margin: 3%;
+    color: black;
+}
+
+.contact h2{
+   margin: 1%;
+}
+
+
+.contact p{
+   font-size: large;
+}
+
+.socialMedia{
+    padding: 3%;
+    margin: 3%;
+}
+
+.socialMedia p{
+    padding: 2%;
+}
+
+.socialMedia i{
+    font-size: 25px;
+   margin: 2px;
+}
+
+.socialMedia i:hover{
+    transform: scale(1.03);
+    color: rgba(41, 41, 41, 0.725);
+}
+
+
+.about{
+    margin: 3%;
+}
+
+.about p , .myAccount p{
+    margin-top: 2px;
+    padding: 1%;
+    
+}
+
+
+.myAccount{
+    margin: 3%;
+}
+
+
+
+.installApp{
+    margin: 3%;
+}
+
+
+.subTitleApp{
+    color: rgba(182, 182, 182, 0.536);
+    margin: 5% 0;
+}
+
+.InstallButtons button{
+    background-color: white;
+    border: 1px solid rgba(0, 122, 0, 0.756);
+    border-radius: 5px;
+    padding: 4% 5%;
+}
+
+.InstallButtons button:hover{
+    background-color: rgba(110, 218, 110, 0.504);
+}
+
+
+
+.InstallButtons p{
+    color: rgba(182, 182, 182, 0.536);
+    margin: 5% 0;
+}
+
+
+.paymentIcons i{
+    font-size: 3rem;
+    margin: 6px;
+    
+}

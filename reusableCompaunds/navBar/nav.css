@@ -30,7 +30,7 @@
 }
 
 .logoContainer a img{
-    width: 20%;
+    width: fit-content;
    height: 100%;
     border-radius: 60px;
     padding: 7px;

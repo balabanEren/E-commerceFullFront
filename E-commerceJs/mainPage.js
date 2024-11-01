@@ -57,5 +57,3 @@ backSlide.addEventListener("click",()=>{
 
 SlideTrigger()
 setInterval(slideAuto,4000)
-
-
