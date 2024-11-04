@@ -1,20 +1,24 @@
+// nav.js
+const scriptP = document.currentScript.src;
+const scriptNav = scriptP.substring(0, scriptP.lastIndexOf('/'));
 
-const scriptPath = document.currentScript.src;
-const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf('/'));
-//console.log(scriptDir)
-
- //  Function to load HTML content
-   function loadHTML(elementId, filePath) {
+function loadNav(elementId, filePath) {
     fetch(filePath)
         .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
+            if (!response.ok) {
+                console.error(`Error loading ${filePath}: ${response.status} ${response.statusText}`);
+                return; // Hata durumunda işlemi durdur
+            }
             return response.text();
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
         })
-        .catch(error => console.error('Error loading HTML:', error));
+        .catch(error => {
+            console.error(`Error loading HTML: ${error}`);
+        });
 }
 
-// Load navigation and footer
-loadHTML('nav', `${scriptDir}/nav.html`);
+loadNav('nav', `${scriptNav}/nav.html`);
+console.log(scriptPath)
+

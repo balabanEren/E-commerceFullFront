@@ -1,20 +1,23 @@
-
+// footer.js
 const scriptPath = document.currentScript.src;
-const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf('/'));
-//console.log(scriptDir)
+const scriptFooter = scriptPath.substring(0, scriptPath.lastIndexOf('/'));
 
- //  Function to load HTML content
-   function loadHTML(elementId, filePath) {
+function loadFooter(elementId, filePath) {
     fetch(filePath)
         .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
+            if (!response.ok) {
+                console.error(`Error loading ${filePath}: ${response.status} ${response.statusText}`);
+                return; // Hata durumunda işlemi durdur
+            }
             return response.text();
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
         })
-        .catch(error => console.error('Error loading HTML:', error));
+        .catch(error => {
+            console.error(`Error loading HTML: ${error}`);
+        });
 }
 
-// Load navigation and footer
-loadHTML('footer', `${scriptDir}/footer.html`);
+loadFooter('footer', `${scriptFooter}/footer.html`);
+console.log(scriptPath)
