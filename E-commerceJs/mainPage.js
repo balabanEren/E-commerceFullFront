@@ -60,3 +60,21 @@ setInterval(slideAuto,4000)
 
 
 
+///product slider
+
+const newProductContainer = document.querySelector(".newProduct-container"); // Select the main container
+const sliderPre_btn = document.querySelector(".sliderPre-btn");
+const sliderNext_btn = document.querySelector(".sliderNext-btn");
+
+let containerWidth = newProductContainer.getBoundingClientRect().width;
+
+sliderPre_btn.addEventListener("click", () => {
+    newProductContainer.scrollLeft -= containerWidth; // Scroll left
+});
+
+sliderNext_btn.addEventListener("click", () => {
+    newProductContainer.scrollLeft += containerWidth; // Scroll right
+});
+
+//console.log("container new productan geliyor",newProductContainer)
+//product slider ends
