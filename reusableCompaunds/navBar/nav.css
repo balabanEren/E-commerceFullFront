@@ -80,7 +80,7 @@
 
 .toggle-btn:hover{
     background-color: rgba(0, 0, 0, 0.325);
-  
+    
 }
 
 
@@ -93,5 +93,7 @@
     .toggle-btn{
         display: flex;
     }
+
+ 
 
 }
