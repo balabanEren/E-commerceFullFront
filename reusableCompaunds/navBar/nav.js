@@ -13,18 +13,32 @@ function loadNav(elementId, filePath) {
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
+           
+         
+         
         })
         .catch(error => {
             console.error(`Error loading HTML: ${error}`);
         });
 }
 
-loadNav('nav', `${scriptNav}/nav.html`);
-console.log(scriptPath)
 
+
+loadNav('nav', `${scriptNav}/nav.html`)  
 
 // nav lowPixel hamburger
+// Dinamik olarak eklenen öğe için bir kontrol mekanizması kurabilirsiniz
+
+function toggleNav(){
+    let toggleBtn=document.querySelector(".toggle-btn")
+    let lowPixelPageLinks=document.querySelector(".lowPixelPageLinks")
+    toggleBtn.addEventListener("click",()=>{
+        
+    })
+}
 
 
 
 //
+
+

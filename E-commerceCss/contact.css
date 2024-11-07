@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ContatUsIntro{
+    height: 50%;
+    background-color: yellowgreen;
+    position: relative;
+}
+.ContatUsIntro img{
+   width: 100%;
+   height: 100%;
+   filter: blur(2px) grayscale(50%);
+}
+.ContactTxt{
+    position: absolute;
+    top: 100px;
+background-color: transparent;
+    width: 50%;
+    left: 20%;
+    text-align: center;
+    padding: 0  2%;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ContactFullInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    height: 60%;
+    gap: 10px;
+}
+
+
+.ContactFullInfo .locationInfo{
+   width: 50%;
+   height: 100%;
+
+
+}
+
+.ContactFullInfo .locationInfo iframe{
+    width: 100%;
+    height: 100%;
+   overflow: hidden;
+   
+ }
+
+ .ContactFullInfo .InfoTxt{
+    box-shadow: 1px 1px 1px 1px rgba(121, 121, 121, 0.637);
+    width: 50%;
+    padding: 3%;
+
+ }
+
+ .InfoTxt .italizeTxt{
+  color: rgba(82, 82, 82, 0.308);
+  font-style: italic;
+ }
+
+ .InfoTxt .contactInfoHeader{
+    font-size: 1.5rem;
+    color: rgba(230, 0, 0, 0.64);
+    padding: 10px;
+   }
+
+
+   .InfoTxt .iconicTxts{
+    padding: 5px 10px;
+    font-style: italic;
+   }
+
+
+   .InfoTxt .iconicTxts span{
+    font-size: 1.4rem;
+    margin-right: 6px;
+    
+   }
+
+
+ @media (max-width:600px) {
+
+    .ContactFullInfo{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+ .contactFormGridContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 80%;
+ }
+
+ .contactForm{
+    background-color: yellowgreen;
+ }
+
+ .contactSideInfo{
+background-color: violet;
+ }
+
+
+ @media (max-width:600px) {
+
+    .contactFormGridContainer{
+        grid-template-columns: 1fr;
+        height: auto;
+     }
+    
+ 
+ }

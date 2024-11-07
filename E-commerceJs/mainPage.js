@@ -68,12 +68,14 @@ const sliderNext_btn = document.querySelector(".sliderNext-btn");
 
 let containerWidth = newProductContainer.getBoundingClientRect().width;
 
+//console.log("full width",newProductContainer.getBoundingClientRect())
+
 sliderPre_btn.addEventListener("click", () => {
-    newProductContainer.scrollLeft -= containerWidth; // Scroll left
+    newProductContainer.scrollLeft -= 400; // Scroll left
 });
 
 sliderNext_btn.addEventListener("click", () => {
-    newProductContainer.scrollLeft += containerWidth; // Scroll right
+    newProductContainer.scrollLeft += 400; // Scroll right
 });
 
 //console.log("container new productan geliyor",newProductContainer)
